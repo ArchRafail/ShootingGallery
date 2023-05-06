@@ -41,7 +41,7 @@ public class TargetsSpawnController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1) || Input.GetKey(KeyCode.Keypad1))
         {
             foreach (var target in targets)
             {
@@ -58,7 +58,7 @@ public class TargetsSpawnController : MonoBehaviour
             liveTarget = 0;
         }
         
-        if (Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.Alpha2) || Input.GetKey(KeyCode.Keypad2))
         {
             ShowAllTargets();
             queue = false;
@@ -131,7 +131,4 @@ public class TargetsSpawnController : MonoBehaviour
             targetController.Hided = false;
         }
     }
-
-    
-    
 }
